@@ -15,7 +15,7 @@ class PaymentController extends Controller
     public function index()
     {
         return response([
-            "data" => Payment::with('user')->latest()->paginate(),
+            "data" => Payment::with('user', 'appointment')->latest()->paginate(),
             "status" => 'ok',
             "success" => true,
             "message" => "success",

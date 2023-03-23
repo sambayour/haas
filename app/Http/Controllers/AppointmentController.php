@@ -18,7 +18,7 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $data = Appointment::latest()->paginate();
+        $data = Appointment::with('payment')->latest()->paginate();
         return response([
             "data" => $data,
             "status" => 'ok',

@@ -41,4 +41,9 @@ class Payment extends Model
     {
         return $this->belongsTo(User::class)->select(['id', 'first_name', 'last_name', 'email']);
     }
+
+    public function appointment()
+    {
+        return $this->belongsTo(Appointment::class, 'order_ref', 'order_ref')->select(['id', 'order_ref', 'duration_minutes', 'appointment_date', 'notes']);
+    }
 }

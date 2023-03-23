@@ -22,11 +22,10 @@ class Appointment extends Model
 
     protected $casts = [
         'appointment_date' => 'date',
-        'paid' => 'boolean',
     ];
 
     public function payment()
     {
-        return $this->belongsTo(Payment::class, 'order_ref')->select(['id', 'provider', 'amount', 'paid']);
+        return $this->belongsTo(Payment::class, 'order_ref', 'order_ref')->select(['id', 'order_ref', 'provider', 'amount', 'paid']);
     }
 }
