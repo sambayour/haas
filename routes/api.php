@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserController;
@@ -38,6 +39,8 @@ Route::group(['prefix' => 'v1', 'middleware' => 'throttle'], function () {
         //update and view profile
         Route::apiresource('users', UserController::class)->except(['index', 'delete']);
 
+        Route::apiresource('appointments', AppointmentController::class)->except(['index']);
+
         //terminate session
         Route::post('logout', [AuthController::class, 'logout']);
 
@@ -51,7 +54,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'throttle'], function () {
             Route::get('super-users', [AdminController::class, 'super_users']);
             Route::get('payments', [PaymentController::class, 'index']);
 
-            Route::apiresource('appointments', AppointmentController::class)->except(['index', 'show']);
+            Route::apiresource('appointments', AppointmentController::class)->except(['update', 'show']);
             Route::apiresource('users', UserController::class)->except(['show', 'update']);
         });
 
