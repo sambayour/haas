@@ -120,6 +120,7 @@ class PaymentController extends Controller
 
         if ($payload['data']['status'] = 'success') {
             Payment::where(['reference' => $payload['data']['reference']])->update(["status" => "successful", "paid" => true, "webhook_response" => $payload]);
+            Appointment::where(['reference' => $payload['txRef']])->update(["status" => "paid"]);
             return response(200);
 
         }
@@ -136,6 +137,7 @@ class PaymentController extends Controller
         $payload = $request->all();
 
         Payment::where(['reference' => $payload['txRef']])->update(["status" => $payload['status'], "paid" => true, "webhook_response" => $payload]);
+        Appointment::where(['reference' => $payload['txRef']])->update(["status" => "paid"]);
 
         return response(200);
     }
