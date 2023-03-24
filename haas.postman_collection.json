@@ -1,0 +1,2399 @@
+{
+	"info": {
+		"_postman_id": "48a0f674-1a31-4e16-b21b-c3a8d4855f8a",
+		"name": "haas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9290980"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"samuel\",\r\n    \"last_name\":\"olubayo\",\r\n    \"phone\":\"08131631893\",\r\n    \"email\":\"SAMUELOLUBAYO@gmail.com\",\r\n    \"password\":\"password\",\r\n    \"password_confirmation\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\":\"abiola\",\r\n    \"last_name\":\"olubayo\",\r\n    \"phone\":\"0803560831\",\r\n    \"email\":\"SAMUELOLUBAYO1@yahoo.com\",\r\n    \"password\":\"password\",\r\n    \"password_confirmation\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:59:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:59:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"7|8AoabMitixt6NcwvNlL0vNq1cFuGGwkVzB7iAr6K\",\n    \"data\": {\n        \"id\": \"98c1843d-2a72-4d92-9db6-10cab8044e6e\",\n        \"first_name\": \"abiola\",\n        \"last_name\": \"olubayo\",\n        \"email\": \"samuelolubayo1@yahoo.com\",\n        \"phone\": \"0803560831\",\n        \"email_verified_at\": null,\n        \"type\": \"user\",\n        \"created_at\": \"March 23, 2023\",\n        \"updated_at\": \"March 23, 2023\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Registration Successful\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login with phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"08131631893\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login with phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phone\":\"08131631893\",\r\n    \"password\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:59:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:59:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"8|jTlVZIiRs7JnKkMbUjQhe5mkiUBcMIgeTKx6lX8t\",\n    \"data\": {\n        \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"first_name\": \"sam\",\n        \"last_name\": \"olubayo\",\n        \"email\": \"samuelolubayo@gmail.com\",\n        \"phone\": \"08131631893\",\n        \"email_verified_at\": null,\n        \"type\": \"admin\",\n        \"created_at\": \"March 23, 2023\",\n        \"updated_at\": \"March 23, 2023\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Logged in Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login with email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"samuelolubayo@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login with email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"samuelolubayo@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:58:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:58:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"6|SF441jL2AoLi4DtcQjdpyl1zf6ZaSzJ4xuYJeHMh\",\n    \"data\": {\n        \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"first_name\": \"sam\",\n        \"last_name\": \"olubayo\",\n        \"email\": \"samuelolubayo@gmail.com\",\n        \"phone\": \"08131631893\",\n        \"email_verified_at\": null,\n        \"type\": \"admin\",\n        \"created_at\": \"March 23, 2023\",\n        \"updated_at\": \"March 23, 2023\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Logged in Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth reset",
+			"item": [
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"samuelolubayo@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/forgot-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"forgot-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "forgot password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"samuelolubayo@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/forgot-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"forgot-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:41:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:41:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Check your email for OTP to reset your password\",\n    \"email\": \"samuelolubayo@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "verify reset token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":346965\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/verify-token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"verify-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verify reset token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\":346965\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/verify-token",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"verify-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:43:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:43:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Token Verified successfully\",\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "complete password reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":690671,\n    \"password\":\"password12\",\n    \"password_confirmation\":\"password12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/password-reset",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"password-reset"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "complete password reset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\":690671,\n    \"password\":\"password12\",\n    \"password_confirmation\":\"password12\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/password-reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"password-reset"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:46:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:46:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password reset successfully\",\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get all users [admin]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all users [admin]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:54:36 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:54:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"98c17db7-2371-432a-8c24-c360f1f0ca5a\",\n                \"first_name\": \"abiola\",\n                \"last_name\": \"olubayo\",\n                \"email\": \"samuelolubayo@yahoo.com\",\n                \"phone\": \"08035608310\",\n                \"email_verified_at\": null,\n                \"type\": \"user\",\n                \"created_at\": \"March 23, 2023\",\n                \"updated_at\": \"March 23, 2023\"\n            },\n            {\n                \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n                \"first_name\": \"sam\",\n                \"last_name\": \"olubayo\",\n                \"email\": \"samuelolubayo@gmail.com\",\n                \"phone\": \"08131631893\",\n                \"email_verified_at\": null,\n                \"type\": \"admin\",\n                \"created_at\": \"March 23, 2023\",\n                \"updated_at\": \"March 23, 2023\"\n            }\n        ],\n        \"links\": {\n            \"first\": \"http://localhost:8000/api/v1/users?page=1\",\n            \"last\": \"http://localhost:8000/api/v1/users?page=1\",\n            \"prev\": null,\n            \"next\": null\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"from\": 1,\n            \"last_page\": 1,\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"&laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://localhost:8000/api/v1/users?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": null,\n                    \"label\": \"Next &raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"path\": \"http://localhost:8000/api/v1/users\",\n            \"per_page\": 15,\n            \"to\": 2,\n            \"total\": 2\n        }\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get a user by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get a user by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users/98c17db7-2371-432a-8c24-c360f1f0ca5a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"98c17db7-2371-432a-8c24-c360f1f0ca5a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:53:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 10:53:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"98c17db7-2371-432a-8c24-c360f1f0ca5a\",\n        \"first_name\": \"abiola\",\n        \"last_name\": \"olubayo\",\n        \"email\": \"samuelolubayo@yahoo.com\",\n        \"phone\": \"08035608310\",\n        \"email_verified_at\": null,\n        \"type\": \"user\",\n        \"created_at\": \"March 23, 2023\",\n        \"updated_at\": \"March 23, 2023\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"sam\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/7cb4bcf2-5fa5-4bd5-ab9e-9e775e11c91e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"7cb4bcf2-5fa5-4bd5-ab9e-9e775e11c91e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"sam\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/7cb4bcf2-5fa5-4bd5-ab9e-9e775e11c91e",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"7cb4bcf2-5fa5-4bd5-ab9e-9e775e11c91e"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 11:03:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 11:03:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"first_name\": \"sam\",\n        \"last_name\": \"olubayo\",\n        \"email\": \"samuelolubayo@gmail.com\",\n        \"phone\": \"08131631893\",\n        \"email_verified_at\": null,\n        \"type\": \"admin\",\n        \"created_at\": \"March 23, 2023\",\n        \"updated_at\": \"March 23, 2023\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"User updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/98c1843d-2a72-4d92-9db6-10cab8044e6e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"98c1843d-2a72-4d92-9db6-10cab8044e6e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete a user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users/98c1843d-2a72-4d92-9db6-10cab8044e6e",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"98c1843d-2a72-4d92-9db6-10cab8044e6e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 11:05:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 11:05:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\": \"password12\",\n    \"new_password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/change-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"change-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "change password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"current_password\": \"password12\",\n    \"new_password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/change-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"change-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:48:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 18:48:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password has been changed successfully\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"id\": \"98c42773-e1ad-4215-a7d4-3ae3f0f226e5\",\n        \"first_name\": \"samuel\",\n        \"last_name\": \"olubayo\",\n        \"email\": \"samuelolubayo@gmail.com\",\n        \"phone\": \"08131631893\",\n        \"created_at\": \"2023-03-24T18:27:09.000000Z\",\n        \"updated_at\": \"2023-03-24T18:48:35.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "generate flutterwave payment link",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\":1023,\n    \"order_ref\":\"0293922\",\n    \"provider\":\"FLUTTERWAVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/payments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "generate flutterwave payment link",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":1023,\n    \"order_ref\":\"029392002\",\n    \"provider\":\"FLUTTERWAVE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/payments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"payments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 12:09:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 12:09:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"https://ravemodal-dev.herokuapp.com/v3/hosted/pay/122e5eb782435b3c294a\",\n    \"reference\": \"HAAS-61320791\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "generate paystack payment link",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\":1023,\n    \"order_ref\":\"0293922\",\n    \"provider\":\"PAYSTACK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/payments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "generate paystack payment link",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":1023,\n    \"order_ref\":\"0293922\",\n    \"provider\":\"PAYSTACK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/payments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"payments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 12:04:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 12:04:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"https://checkout.paystack.com/8w9f4xmp7hufs46\",\n    \"reference\": \"HAAS-82067477\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all payments [admin]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/payments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all payments [admin]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/payments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"payments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 18:09:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 18:09:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": \"98c19d42-703b-42e1-8545-709ae1603229\",\n                \"user_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n                \"provider\": \"FLUTTERWAVE\",\n                \"webhook_response\": null,\n                \"reference\": \"HAAS-61320791\",\n                \"amount\": 1023,\n                \"order_ref\": \"029392002\",\n                \"status\": \"pending\",\n                \"created_at\": \"2023-03-23T12:09:04.000000Z\",\n                \"updated_at\": \"2023-03-23T12:09:04.000000Z\",\n                \"user\": {\n                    \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n                    \"first_name\": \"sam\",\n                    \"last_name\": \"olubayo\",\n                    \"email\": \"samuelolubayo@gmail.com\"\n                },\n                \"appointment\": null\n            },\n            {\n                \"id\": \"98c19b9f-9148-4b38-acbe-881285f81a88\",\n                \"user_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n                \"provider\": \"PAYSTACK\",\n                \"webhook_response\": null,\n                \"reference\": \"HAAS-82067477\",\n                \"amount\": 1023,\n                \"order_ref\": \"822358\",\n                \"status\": \"pending\",\n                \"created_at\": \"2023-03-23T12:04:30.000000Z\",\n                \"updated_at\": \"2023-03-23T12:04:30.000000Z\",\n                \"user\": {\n                    \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n                    \"first_name\": \"sam\",\n                    \"last_name\": \"olubayo\",\n                    \"email\": \"samuelolubayo@gmail.com\"\n                },\n                \"appointment\": {\n                    \"id\": \"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a\",\n                    \"order_ref\": \"822358\",\n                    \"duration_minutes\": 3005,\n                    \"appointment_date\": null,\n                    \"notes\": \"constant headache\"\n                }\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/payments?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/payments?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/payments?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/payments\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get payment by reference",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/payments/HAAS-61320791",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"payments",
+								"HAAS-61320791"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get payment by reference",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/payments/HAAS-61320791",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"payments",
+										"HAAS-61320791"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 12:14:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 12:14:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"98c19d42-703b-42e1-8545-709ae1603229\",\n        \"user_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"provider\": \"FLUTTERWAVE\",\n        \"webhook_response\": null,\n        \"reference\": \"HAAS-61320791\",\n        \"amount\": 1023,\n        \"order_ref\": \"029392002\",\n        \"status\": \"pending\",\n        \"created_at\": \"2023-03-23T12:09:04.000000Z\",\n        \"updated_at\": \"2023-03-23T12:09:04.000000Z\",\n        \"user\": {\n            \"id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n            \"first_name\": \"sam\",\n            \"last_name\": \"olubayo\",\n            \"email\": \"samuelolubayo@gmail.com\"\n        }\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get all super admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/super-users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"super-users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all super admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/super-users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"super-users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:01:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:01:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": \"98c42773-e1ad-4215-a7d4-3ae3f0f226e5\",\n                \"first_name\": \"samuel\",\n                \"last_name\": \"olubayo\",\n                \"email\": \"samuelolubayo@gmail.com\",\n                \"phone\": \"08131631893\",\n                \"created_at\": \"2023-03-24T18:27:09.000000Z\",\n                \"updated_at\": \"2023-03-24T18:48:35.000000Z\"\n            },\n            {\n                \"id\": \"98c42718-8b08-410e-ab59-d1f5d6faa5ce\",\n                \"first_name\": \"abiola\",\n                \"last_name\": \"olubayo\",\n                \"email\": \"samuelolubayo@yahoo.com\",\n                \"phone\": \"0803560831\",\n                \"created_at\": \"2023-03-24T18:26:09.000000Z\",\n                \"updated_at\": \"2023-03-24T18:26:09.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/super-users?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/super-users?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/super-users?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/super-users\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get all doctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/doctors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all doctors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctors",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:05:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:05:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": \"98c434a2-25f6-4433-94e3-035f6a81359e\",\n                \"first_name\": \"maye\",\n                \"last_name\": \"hermann\",\n                \"email\": \"bruce.dicki@example.org\",\n                \"phone\": \"+14699692799\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-2672-4d5b-af53-9ad1ceacf51f\",\n                \"first_name\": \"irma\",\n                \"last_name\": \"strosin\",\n                \"email\": \"marietta.schumm@example.com\",\n                \"phone\": \"+16827282122\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c427b4-f170-4264-9083-6d96d4d05877\",\n                \"first_name\": \"test\",\n                \"last_name\": \"user\",\n                \"email\": \"samuelolubayo@yandex.com\",\n                \"phone\": \"8131631893\",\n                \"created_at\": \"2023-03-24T18:27:51.000000Z\",\n                \"updated_at\": \"2023-03-24T18:27:51.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/doctors?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/doctors?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/doctors?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/doctors\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get all patients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all patients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patients",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:06:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:06:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": \"98c434a2-216b-4570-93ab-23345369262b\",\n                \"first_name\": \"bertha\",\n                \"last_name\": \"gaylord\",\n                \"email\": \"mraz.darby@example.org\",\n                \"phone\": \"+17474084097\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-263c-4dab-917c-d1fa23f4bb8e\",\n                \"first_name\": \"shyanne\",\n                \"last_name\": \"gibson\",\n                \"email\": \"jonathan.schroeder@example.net\",\n                \"phone\": \"+14243313630\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-26a2-45e7-8cfa-797c71266528\",\n                \"first_name\": \"hulda\",\n                \"last_name\": \"adams\",\n                \"email\": \"cynthia61@example.org\",\n                \"phone\": \"+17577991904\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-26e1-4a3d-a515-9a4814744d35\",\n                \"first_name\": \"bettie\",\n                \"last_name\": \"hettinger\",\n                \"email\": \"gia.haag@example.com\",\n                \"phone\": \"+16578992229\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-2727-47e3-a3dc-5bbe765a3dce\",\n                \"first_name\": \"caterina\",\n                \"last_name\": \"bosco\",\n                \"email\": \"bashirian.johnathan@example.net\",\n                \"phone\": \"+15307240307\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-2757-4e89-b589-607349ff3653\",\n                \"first_name\": \"linwood\",\n                \"last_name\": \"rath\",\n                \"email\": \"lesch.connor@example.org\",\n                \"phone\": \"+16803575457\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-2826-4b50-a191-061018122d5c\",\n                \"first_name\": \"kristofer\",\n                \"last_name\": \"barrows\",\n                \"email\": \"jakubowski.dawson@example.net\",\n                \"phone\": \"+17575638501\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c434a2-284f-494d-8aef-2b250f07a15c\",\n                \"first_name\": \"earnest\",\n                \"last_name\": \"schinner\",\n                \"email\": \"max14@example.org\",\n                \"phone\": \"+15084793374\",\n                \"created_at\": \"2023-03-24T19:04:00.000000Z\",\n                \"updated_at\": \"2023-03-24T19:04:00.000000Z\"\n            },\n            {\n                \"id\": \"98c427b4-5397-4c32-b435-95132ca70b12\",\n                \"first_name\": \"marc\",\n                \"last_name\": \"ratke\",\n                \"email\": \"monahan.israel@example.net\",\n                \"phone\": \"+18786398113\",\n                \"created_at\": \"2023-03-24T18:27:51.000000Z\",\n                \"updated_at\": \"2023-03-24T18:27:51.000000Z\"\n            },\n            {\n                \"id\": \"98c42726-a806-4c1b-8999-25d389471604\",\n                \"first_name\": \"rhoda\",\n                \"last_name\": \"cremin\",\n                \"email\": \"rex.hettinger@example.com\",\n                \"phone\": \"+18579083822\",\n                \"created_at\": \"2023-03-24T18:26:18.000000Z\",\n                \"updated_at\": \"2023-03-24T18:26:18.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patients?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patients?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patients?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patients\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 10,\n        \"total\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "grant user a role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/assign-role",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"assign-role"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "grant user a role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"98c434a2-284f-494d-8aef-2b250f07a15c\",\n    \"role\": \"ADMIN\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/assign-role",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"assign-role"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:11:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:11:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Additional privilege granted\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"id\": \"98c434a2-284f-494d-8aef-2b250f07a15c\",\n        \"first_name\": \"earnest\",\n        \"last_name\": \"schinner\",\n        \"email\": \"max14@example.org\",\n        \"phone\": \"+15084793374\",\n        \"email_verified_at\": \"2023-03-24T19:04:00.000000Z\",\n        \"type\": \"admin\",\n        \"created_at\": \"March 24, 2023\",\n        \"updated_at\": \"March 24, 2023\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "revoke role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"98c434a2-284f-494d-8aef-2b250f07a15c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/revoke",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"revoke"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "revoke role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"98c434a2-284f-494d-8aef-2b250f07a15c\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/revoke",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"revoke"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:14:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Mar 2023 19:14:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"all privilege revoked\",\n    \"status\": \"ok\",\n    \"success\": true,\n    \"data\": {\n        \"id\": \"98c434a2-284f-494d-8aef-2b250f07a15c\",\n        \"first_name\": \"earnest\",\n        \"last_name\": \"schinner\",\n        \"email\": \"max14@example.org\",\n        \"phone\": \"+15084793374\",\n        \"email_verified_at\": \"2023-03-24T19:04:00.000000Z\",\n        \"type\": \"user\",\n        \"created_at\": \"March 24, 2023\",\n        \"updated_at\": \"March 24, 2023\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "get all appointment [admin]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/appointments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all appointment [admin]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/appointments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 17:01:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 17:01:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": \"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a\",\n                \"patient_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n                \"doctor_id\": null,\n                \"duration_minutes\": 0,\n                \"notes\": \"constant headache\",\n                \"order_ref\": \"822358\",\n                \"appointment_date\": null,\n                \"status\": \"pending\",\n                \"created_at\": \"2023-03-23T16:53:10.000000Z\",\n                \"updated_at\": \"2023-03-23T16:53:10.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/appointments?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/appointments?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/appointments?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/appointments\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"groups\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get a appointment by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/appointments/98c202db-ea0e-4a6b-a56e-28b2e3c73d9a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"appointments",
+								"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get a appointment by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/appointments/98c202db-ea0e-4a6b-a56e-28b2e3c73d9a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointments",
+										"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 17:00:48 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 17:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a\",\n        \"patient_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"doctor_id\": null,\n        \"duration_minutes\": 0,\n        \"notes\": \"constant headache\",\n        \"order_ref\": \"822358\",\n        \"appointment_date\": null,\n        \"status\": \"pending\",\n        \"created_at\": \"2023-03-23T16:53:10.000000Z\",\n        \"updated_at\": \"2023-03-23T16:53:10.000000Z\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create an appoitment [patient]]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hZhOiIz95dRSuzL7bQjBoFHW9qFk6TGHxYKYdPsS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notes\":\"i have no idea, what is happening\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/appointments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create an appoitment [patient]]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notes\":\"constant headache\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/appointments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 16:53:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 16:53:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Appointment added succesfully\",\n    \"data\": {\n        \"notes\": \"constant headache\",\n        \"patient_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"order_ref\": 822358,\n        \"updated_at\": \"2023-03-23T16:53:10.000000Z\",\n        \"created_at\": \"2023-03-23T16:53:10.000000Z\",\n        \"id\": \"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update appointment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|AvG29949CsP3GKUUf0HIHV8fxPEmnGxGzZ3pEmHe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"duration_minutes\":3005\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/appointments/98c202db-ea0e-4a6b-a56e-28b2e3c73d9a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"appointments",
+								"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update appointment",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"duration_minutes\":3005\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/appointments/98c202db-ea0e-4a6b-a56e-28b2e3c73d9a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointments",
+										"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 17:22:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 17:22:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"98c202db-ea0e-4a6b-a56e-28b2e3c73d9a\",\n        \"patient_id\": \"98c174cb-eda7-4da1-a983-4ce118aab0ed\",\n        \"doctor_id\": null,\n        \"duration_minutes\": 3005,\n        \"notes\": \"constant headache\",\n        \"order_ref\": \"822358\",\n        \"appointment_date\": null,\n        \"status\": \"pending\",\n        \"created_at\": \"2023-03-23T16:53:10.000000Z\",\n        \"updated_at\": \"2023-03-23T17:22:43.000000Z\"\n    },\n    \"status\": \"ok\",\n    \"success\": true,\n    \"message\": \"Appointment Updated Succesfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
