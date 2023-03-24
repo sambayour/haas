@@ -121,6 +121,9 @@ class PaymentController extends Controller
         if ($payload['data']['status'] = 'success') {
             Payment::where(['reference' => $payload['data']['reference']])->update(["status" => "successful", "paid" => true, "webhook_response" => $payload]);
             Appointment::where(['reference' => $payload['txRef']])->update(["status" => "paid"]);
+
+            $this->sendEmail($payload['data']['reference']);
+
             return response(200);
 
         }
@@ -139,7 +142,22 @@ class PaymentController extends Controller
         Payment::where(['reference' => $payload['txRef']])->update(["status" => $payload['status'], "paid" => true, "webhook_response" => $payload]);
         Appointment::where(['reference' => $payload['txRef']])->update(["status" => "paid"]);
 
+        $this->sendEmail($payload['txRef']);
+
         return response(200);
+    }
+
+    private function sendEmail($ref)
+    {
+        $userId = Payment::where('reference', $ref)->pluck('user_id');
+        $user = User::find($userId);
+        $info = [
+            'first_name' => $user->first_name ?: 'User',
+            'email' => $user->email,
+        ];
+
+        Mail::to($request->email)->send(new PaymentEmail($info));
+        return;
     }
 
     public function fetchPayment($ref)
