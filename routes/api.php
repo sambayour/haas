@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PaymentController;
@@ -49,9 +50,11 @@ Route::group(['prefix' => 'v1', 'middleware' => 'throttle'], function () {
         Route::get('payments/{id}', [PaymentController::class, 'fetchPayment']);
 
         Route::group(['middleware' => ['admin']], function () {
-            Route::post('make-admin', [AdminController::class, 'admin']);
-            Route::post('revoke-admin', [AdminController::class, 'revoke']);
+            Route::post('assign-role', [AdminController::class, 'upgrade']);
+            Route::post('revoke', [AdminController::class, 'revoke']);
             Route::get('super-users', [AdminController::class, 'super_users']);
+            Route::get('doctors', [AdminController::class, 'doctors']);
+            Route::get('patients', [AdminController::class, 'patients']);
             Route::get('payments', [PaymentController::class, 'index']);
 
             Route::apiresource('appointments', AppointmentController::class)->except(['update', 'show']);
