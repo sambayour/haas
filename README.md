@@ -1,23 +1,6 @@
 ### HAAS (Health As A Service)
 
-The RESTFUL API leverage the following classes, methods, and functions
-
--   **Sanctum**
--   **Eloquent**
--   **Middleware**
--   **Testing**
--   **Mail**
--   **Validation**
--   **Factory**
--   **Migration**
--   **Accessors & Mutators**
--   **Database**
--   **Rate Limiting**
--   **Query Builder**
--   **API Resource**
--   **Relationship**
-
-### Set up
+## Set up
 
 ```
 # Clone Project
@@ -46,9 +29,32 @@ php artisan test
 
 ```
 
-### Endpoint
+## Endpoint
+
+baseurl local `localhost:8000/api/v1`
+
+baseurl staging `https://squid-app-f8wsg.ondigitalocean.app/api/v1`
+
+To login you need to do `baseurl/login` for example
 
 A postman collection named `haas.postman_collection.json` is in the root folder.
+
+The RESTFUL API leverage the following classes, methods, and functions
+
+-   **Sanctum**
+-   **Eloquent**
+-   **Middleware**
+-   **Testing**
+-   **Mail**
+-   **Validation**
+-   **Factory**
+-   **Migration**
+-   **Accessors & Mutators**
+-   **Database**
+-   **Rate Limiting**
+-   **Query Builder**
+-   **API Resource**
+-   **Relationship**
 
 ## Code of Conduct
 
