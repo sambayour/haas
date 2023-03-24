@@ -222,7 +222,7 @@ class AuthController extends Controller
         User::where('email', $user->email)->update(['password' => $pwd]);
         DB::table('password_resets')->where('email', $user->email)->delete();
 
-        $response = array('message' => 'Password changed successfully', 'success' => true);
+        $response = array('message' => 'Password reset successfully', 'success' => true);
         return response($response, Response::HTTP_OK);
     }
 
