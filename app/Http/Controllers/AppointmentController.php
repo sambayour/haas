@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Mail\AppointmentEmail;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -57,6 +59,12 @@ class AppointmentController extends Controller
                 'order_ref' => random_int(100000, 999999),
             ]
         ));
+
+        $info = [
+            'first_name' => Auth::user()->first_name ?: 'User',
+        ];
+
+        Mail::to(Auth::user()->email)->send(new AppointmentEmail($info));
 
         return response([
             "status" => 'ok',
