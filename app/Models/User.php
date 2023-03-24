@@ -53,6 +53,10 @@ class User extends Authenticatable
     {
         if ($level == 99) {
             return "admin";
+        } elseif ($level == 79) {
+            return "subAdmin";
+        } elseif ($level == 59) {
+            return "doctor";
         } elseif ($level == 0) {
             return "user";
         }
