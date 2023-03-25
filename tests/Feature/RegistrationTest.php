@@ -13,7 +13,7 @@ class RegistrationTest extends TestCase
             'first_name' => 'Test',
             'last_name' => 'User',
             'email' => 'samuelolubayo@yandex.com',
-            'phone' => '8131631893',
+            'phone' => '+2348131631893',
             'password' => 'password',
             'password_confirmation' => 'password',
         ];
