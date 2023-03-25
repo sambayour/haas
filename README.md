@@ -18,9 +18,6 @@ php artisan key:generate
 # Run Migrations
 php artisan migrate
 
-# Install Passport
-php artisan passport:install
-
 # Start Project
 php artisan serve
 
