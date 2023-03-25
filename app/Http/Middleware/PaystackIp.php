@@ -18,8 +18,10 @@ class PaystackIp
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
+        echo "incoming Paystack IP.." . $request->getClientIp();
+
         if (!in_array($request->getClientIp(), $this->whitelistIps)) {
             abort(403, "You are restricted to access the route.");
         }
