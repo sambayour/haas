@@ -40,7 +40,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'throttle'], function () {
         //update and view profile
         Route::apiresource('users', UserController::class)->except(['index', 'delete']);
 
-        Route::apiresource('appointments', AppointmentController::class)->except(['index']);
+        Route::apiresource('appointments', AppointmentController::class)->except(['index', 'delete']);
 
         //terminate session
         Route::post('logout', [AuthController::class, 'logout']);
@@ -57,7 +57,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'throttle'], function () {
             Route::get('patients', [AdminController::class, 'patients']);
             Route::get('payments', [PaymentController::class, 'index']);
 
-            Route::apiresource('appointments', AppointmentController::class)->except(['update', 'show']);
+            Route::apiresource('appointments', AppointmentController::class)->except(['update', 'show', 'store']);
             Route::apiresource('users', UserController::class)->except(['show', 'update']);
         });
 
