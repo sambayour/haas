@@ -39,6 +39,15 @@ To login you need to do `baseurl/login` for example
 
 A postman collection named `haas.postman_collection.json` is in the root folder.
 
+example admin login for staging
+
+```
+{
+    "email":"samuelolubayo@gmail.com",
+    "password":"password"
+}
+```
+
 The RESTFUL API leverage the following classes, methods, and functions
 
 -   **Sanctum**
