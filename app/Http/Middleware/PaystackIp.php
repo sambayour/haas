@@ -20,9 +20,15 @@ class PaystackIp
      */
     public function handle(Request $request, Closure $next): Response
     {
+        $whitelistIps = [
+            '52.31.139.75',
+            '52.49.173.169',
+            '52.214.14.220',
+        ];
+
         echo "incoming Paystack IP.." . $request->getClientIp();
 
-        if (!in_array($request->getClientIp(), $this->whitelistIps)) {
+        if (!in_array($request->getClientIp(), $whitelistIps)) {
             abort(403, "You are restricted to access the route.");
         }
         return $next($request);
