@@ -5,6 +5,7 @@ use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\PaystackIp;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,8 @@ Route::group(['prefix' => 'v1', 'middleware' => 'throttle'], function () {
 
     //webhook
     Route::post('flw-webhook', [PaymentController::class, 'flw']);
-    Route::post('paystack-webhook', [PaymentController::class, 'paystack'])->middleware('paystack.ip');
+    // Route::post('paystack-webhook', [PaymentController::class, 'paystack'])->middleware('paystack.ip');
+    Route::post('paystack-webhook', [PaymentController::class, 'paystack'])->middleware(PaystackIp::class);
 
     Route::group(['middleware' => 'auth:sanctum'], function () {
 
