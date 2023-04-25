@@ -1,5 +1,15 @@
 ### HAAS (Health As A Service)
 
+OBJECTIVES
+1. Login and registration for patients (token based authentication for the API)
+2. Appointment booking for patients
+3. Payment Integration (Multiple payment integration using both Paystack and Flutterwave)
+4. Implement payment webhook to listen to payment confirmation and decline
+5. Appointment status should change upon payment confirmation
+6. Email at each action steps
+7. All payments should be logged and tied to appointments
+8. Write unit tests for all features using PHPUnit
+
 ## Set up
 
 ```
